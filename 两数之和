@@ -1,0 +1,14 @@
+```
+func twoSum(nums []int, target int) []int {
+    m := make(map[int]int)
+    res := make([]int, 0)
+    for k, v := range nums { 
+        if k1, ok := m[target-v]; ok {
+            res = append(res, []int{k, k1}...)
+            break
+        }
+        m[v] = k
+    }
+    return res
+}
+```
